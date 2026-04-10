@@ -1,12 +1,19 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
-import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+import dill
+import os
 
 # ================= LOAD MODEL =================
-model = pickle.load(open("artifacts/best_model.pkl", "rb"))
+model_path = os.path.join('artifacts', 'best_model.pkl')
+
+# 2. Load the model using dill
+try:
+    with open(model_path, 'rb') as f:
+        model = dill.load(f)
+except FileNotFoundError:
+    st.error(f"Model file not found at {model_path}. Please check your folder structure on GitHub!")
+
 
 st.set_page_config(page_title="IPL Win Predictor", page_icon="🏏")
 st.title("IPL Win Probability Predictor 🏏")
