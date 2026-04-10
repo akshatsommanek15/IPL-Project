@@ -1,4 +1,11 @@
 pandas
 numpy
 scikit-learn
+optuna
+category_encoders
+dill
+catboost
+xgboost
+streamlit
+lightgbm
 -e .
