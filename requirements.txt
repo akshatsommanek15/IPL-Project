@@ -2,4 +2,4 @@ pandas
 numpy
 dill
 streamlit
-scikiit-learn==1.7.2
+scikit-learn==1.7.2
