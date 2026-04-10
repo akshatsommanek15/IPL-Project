@@ -105,6 +105,23 @@ if st.button('Predict Win Probability'):
     prob_loss = result[0][0] # Defending wins
     prob_win = result[0][1]  # Chasing wins
 
+    st.markdown("### 📊 Match Statistics")
+    stat_col1, stat_col2, stat_col3, stat_col4 = st.columns(4)
+
+        # Calculate Overs Left in Cricket Notation (e.g., 9.2)
+    overs_rem = balls_left // 6
+    balls_rem = balls_left % 6
+    overs_left_str = f"{overs_rem}.{balls_rem}"
+
+    with stat_col1:
+        st.metric(label="Runs Needed", value=runs_left)
+    with stat_col2:
+         st.metric(label="Overs Left", value=overs_left_str)
+    with stat_col3:
+        st.metric(label="Required RR", value=round(rrr, 2), delta=round(rrr - crr, 2), delta_color="inverse")
+    with stat_col4:
+        st.metric(label="Current RR", value=round(crr, 2))
+
     # --- STEP 5: DISPLAY ---
     st.markdown("---")
     res_col1, res_col2 = st.columns(2)
