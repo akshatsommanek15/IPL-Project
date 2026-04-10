@@ -3,4 +3,3 @@ numpy
 dill
 streamlit
 scikiit-learn==1.7.2
--e .
