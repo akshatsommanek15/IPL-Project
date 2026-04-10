@@ -2,7 +2,7 @@ IPL Win Probability Predictor (2026)
 An end-to-end Machine Learning web application that predicts the win probability of the chasing team in an IPL match. This project goes beyond basic run-rate calculations by incorporating match pressure and batting depth, offering a more nuanced "cricketing" perspective on game outcomes.
 
 🚀 Live Demo
-[Insert your Streamlit URL here]
+https://ipl-smart-predictor26.streamlit.app/
 
 🧐 The Design Engineering Approach
 In cricket, the scoreboard often hides the true tension of the match. A team needing 7 runs an over might seem comfortable, but the loss of key specialist batsmen changes the psychological and statistical landscape.
@@ -28,7 +28,7 @@ Persistence: Model serialized using dill to maintain complex pipeline structures
 
 
 🛠️ Tech Stack
-Language: Python 3.14
+Language: Python 3.10
 
 Frontend: Streamlit
 
