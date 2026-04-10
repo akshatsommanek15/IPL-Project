@@ -1,12 +1,6 @@
 pandas
 numpy
-scikit-learn
-optuna
-category_encoders
 dill
-catboost
-xgboost
 streamlit
-lightgbm
 scikiit-learn==1.7.2
 -e .
