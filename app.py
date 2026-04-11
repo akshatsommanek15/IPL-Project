@@ -150,7 +150,7 @@ with tab2:
     report_path = os.path.join('artifacts', 'model_report.png')
     
     if os.path.exists(report_path):
-        st.image(report_path, caption="Model Classification Report (Accuracy: 78.79%)", use_container_width=True)
+        st.image(report_path, caption="Model Classification Report (Accuracy: 78.79%)", width='stretch')
     else:
         st.warning("Model report image not found in the artifacts folder.")
 
